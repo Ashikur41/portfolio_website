@@ -1,0 +1,1 @@
+<img src="{{ asset('/backend/assets/images/logo-light.png') }}" alt="" width="100px">
