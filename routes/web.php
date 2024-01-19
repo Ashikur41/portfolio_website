@@ -4,6 +4,7 @@ use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\Home\HomeSlideController;
+use App\Http\Controllers\FrontendController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,9 +17,6 @@ use App\Http\Controllers\Home\HomeSlideController;
 |
 */
 
-Route::get('/', function () {
-    return view('frontend.index');
-});
 
 Route::get('/dashboard', function () {
     return view('admin.index');
@@ -42,6 +40,26 @@ Route::controller(HomeSlideController::class)->group(function () {
 });
 
 
+
+
+
+
+
+
+
+
+//Frontend all Route
+Route::controller(FrontendController::class)->group(function () {
+    Route::get('/', 'index')->name('frontend.index');
+    Route::get('/about/page', 'AboutPage')->name('about.page');
+    Route::get('/service/page', 'servicePage')->name('service.page');
+    Route::get('/portfolio/page', 'portfolioPage')->name('portfolio.page');
+    Route::get('/portfolio/details', 'portfolioDetailsPage')->name('portfolio.details.page');
+    Route::get('/blog/news/page', 'blogNewsPage')->name('blog.news.page');
+    Route::get('/blog/news/details', 'blogNewsDetails')->name('blogNews.details');
+    Route::get('/contact/page', 'contactPage')->name('contact.page');
+
+});
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');

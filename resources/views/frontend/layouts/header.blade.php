@@ -12,26 +12,26 @@
                                     </div>
                                     <div class="navbar__wrap main__menu d-none d-xl-flex">
                                         <ul class="navigation">
-                                            <li class="active"><a href="index.html">Home</a></li>
-                                            <li><a href="about.html">About</a></li>
-                                            <li><a href="services-details.html">Services</a></li>
+                                            <li class="active"><a href="{{ route('frontend.index') }}">Home</a></li>
+                                            <li><a href="{{ route('about.page') }}">About</a></li>
+                                            <li><a href="{{ route('service.page') }}">Services</a></li>
                                             <li class="menu-item-has-children"><a href="#">Portfolio</a>
                                                 <ul class="sub-menu">
-                                                    <li><a href="portfolio.html">Portfolio</a></li>
-                                                    <li><a href="portfolio-details.html">Portfolio Details</a></li>
+                                                    <li><a href="{{ route('portfolio.page') }}">Portfolio</a></li>
+                                                    <li><a href="{{ route('portfolio.details.page') }}">Portfolio Details</a></li>
                                                 </ul>
                                             </li>
                                             <li class="menu-item-has-children"><a href="#">Our Blog</a>
                                                 <ul class="sub-menu">
-                                                    <li><a href="blog.html">Our News</a></li>
-                                                    <li><a href="blog-details.html">News Details</a></li>
+                                                    <li><a href="{{ route('blog.news.page') }}">Our News</a></li>
+                                                    <li><a href="{{ route('blogNews.details') }}">News Details</a></li>
                                                 </ul>
                                             </li>
-                                            <li><a href="contact.html">contact me</a></li>
+                                            <li><a href="{{ route('contact.page') }}">contact me</a></li>
                                         </ul>
                                     </div>
                                     <div class="header__btn d-none d-md-block">
-                                        <a href="contact.html" class="btn">Contact me</a>
+                                        <a href="{{ route('contact.page') }}" class="btn">Contact me</a>
                                     </div>
                                 </nav>
                             </div>

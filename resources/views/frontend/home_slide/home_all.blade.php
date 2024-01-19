@@ -16,7 +16,7 @@
                             <div class="banner__content">
                                 <h2 class="title wow fadeInUp" data-wow-delay=".2s"><span>{{ $homeskider->title }}</h2>
                                 <p class="wow fadeInUp" data-wow-delay=".4s">{{ $homeskider->short_title }}</p>
-                                <a href="about.html" class="btn banner__btn wow fadeInUp" data-wow-delay=".6s">more about me</a>
+                                <a href="{{ route('about.page') }}" class="btn banner__btn wow fadeInUp" data-wow-delay=".6s">more about me</a>
                             </div>
                         </div>
                     </div>
